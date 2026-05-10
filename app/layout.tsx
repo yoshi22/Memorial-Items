@@ -27,7 +27,9 @@ export const metadata: Metadata = {
   title: 'Memorial Items — ペットのメモリアルアート',
   description: '大切なペットの写真をもとに、手作業で整えたメモリアルアートを proof 確認後にデジタル納品します。',
   icons: {
-    icon: '/icon.png',
+    icon: [{ url: '/favicon-b-48.png', type: 'image/png', sizes: '48x48' }],
+    shortcut: [{ url: '/favicon-b-48.png', type: 'image/png', sizes: '48x48' }],
+    apple: [{ url: '/favicon-b-48.png', type: 'image/png', sizes: '48x48' }],
   },
 }
 

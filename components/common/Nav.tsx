@@ -7,7 +7,7 @@ export function Nav() {
       <div className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
-            src="/icon.png"
+            src="/favicon-b-48.png"
             alt=""
             width={28}
             height={28}
