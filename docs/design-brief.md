@@ -74,7 +74,7 @@ Claude Design に渡して UI の改善を依頼するためのブリーフで�
 
 ### 各セクションの改善ポイント
 - **Nav**: ロゴに個性を（現在は単純な text）
-- **Hero**: アート作品の画像（またはプレースホルダー）を入れ、コピーの感情訴求を強化
+- **Hero**: 実際のアート作品画像を入れ、コピーの感情訴求を強化
 - **Step 説明**: 番号とテキストだけでなく、各ステップのアイコンや小さなイラスト
 - **スタイル選択**: Select ドロップダウンではなく、視覚的なカード選択 UI（ラジオボタン + サムネイル）
 - **Proof確認ページの CTA**: 「承認する」ボタンを目立つ primary color で強調、「修正依頼」は secondary
@@ -389,19 +389,19 @@ export function OrderForm() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
           <Label htmlFor="customer_name">お名前 *</Label>
-          <Input id="customer_name" {...register('customer_name')} placeholder="山田 太郎" />
+          <Input id="customer_name" {...register('customer_name')} />
           {errors.customer_name && <p className="text-xs text-red-600">{errors.customer_name.message}</p>}
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="customer_email">メールアドレス *</Label>
-          <Input id="customer_email" type="email" {...register('customer_email')} placeholder="you@example.com" />
+          <Input id="customer_email" type="email" {...register('customer_email')} />
           {errors.customer_email && <p className="text-xs text-red-600">{errors.customer_email.message}</p>}
         </div>
       </div>
 
       <div className="space-y-1.5">
         <Label htmlFor="pet_name">ペットのお名前 *</Label>
-        <Input id="pet_name" {...register('pet_name')} placeholder="ポチ" />
+        <Input id="pet_name" {...register('pet_name')} />
         {errors.pet_name && <p className="text-xs text-red-600">{errors.pet_name.message}</p>}
       </div>
 
@@ -443,16 +443,15 @@ export function OrderForm() {
         <Textarea
           id="must_keep_features"
           {...register('must_keep_features')}
-          placeholder="例: 鼻の周りの白い毛、左耳の折れ、目の琥珀色など"
           rows={3}
         />
-        <p className="text-xs text-gray-500">制作で必ず反映します。できるだけ具体的にご記入ください。</p>
+        <p className="text-xs text-gray-500">毛色、模様、耳や目の特徴など、制作で必ず反映したい点を具体的にご記入ください。</p>
         {errors.must_keep_features && <p className="text-xs text-red-600">{errors.must_keep_features.message}</p>}
       </div>
 
       <div className="space-y-1.5">
         <Label htmlFor="notes">その他ご要望（任意）</Label>
-        <Textarea id="notes" {...register('notes')} placeholder="ご自由にご記入ください" rows={2} />
+        <Textarea id="notes" {...register('notes')} rows={2} />
       </div>
 
       <div className="space-y-1.5">
@@ -570,9 +569,9 @@ export function ProofReviewActions({ proofToken, proofId, isApproved, enablePhys
               id="request_text"
               name="request_text"
               rows={5}
-              placeholder="例: 右耳の色をもう少し濃くしてほしい。目の表情が少し違う気がするので明るくしてほしい。"
               required
             />
+            <p className="text-xs text-gray-500">気になる箇所と希望する調整内容を、できるだけ具体的にご記入ください。</p>
           </div>
           <div className="flex gap-3">
             <Button type="submit" disabled={isPending} className="flex-1">

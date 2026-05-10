@@ -131,7 +131,8 @@ function ExampleFields({ item }: { item?: ContentExample }) {
       <div className="flex gap-4">
         <div className="space-y-1.5 flex-1">
           <Label>タグ（カンマ区切り）</Label>
-          <Input name="tags" defaultValue={item?.tags.join(', ')} placeholder="dog, soft, framed" />
+          <Input name="tags" defaultValue={item?.tags.join(', ')} />
+          <p className="text-xs text-gray-500">公開ページで絞り込みや補足表示に使うタグを入力します。</p>
         </div>
         <div className="space-y-1.5 w-24">
           <Label>並び順</Label>

@@ -89,7 +89,7 @@ export function AdminOrderActions({ orderId, currentStatus, currentPayment, enab
         >
           <Label htmlFor="tracking_number">追跡番号登録（発送済みに変更されます）</Label>
           <div className="flex gap-2">
-            <Input id="tracking_number" name="tracking_number" placeholder="追跡番号" />
+            <Input id="tracking_number" name="tracking_number" />
             <Button type="submit" size="default" variant="outline" disabled={isPending}>登録</Button>
           </div>
         </form>
@@ -105,7 +105,7 @@ export function AdminOrderActions({ orderId, currentStatus, currentPayment, enab
         className="space-y-2"
       >
         <Label htmlFor="note">管理者メモを追加</Label>
-        <Textarea id="note" name="note" rows={2} placeholder="内部メモ" />
+        <Textarea id="note" name="note" rows={2} />
         <Button type="submit" size="sm" variant="outline" disabled={isPending}>追加</Button>
       </form>
     </div>

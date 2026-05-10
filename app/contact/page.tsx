@@ -21,7 +21,11 @@ export default function ContactPage() {
       </section>
       <section className="rounded-2xl border border-line bg-surface p-6">
         <h2 className="font-semibold text-ink mb-3">ご連絡時に含めていただきたい情報</h2>
-        <p>注文済みの場合は、お名前、注文時のメールアドレス、ペット名、ご質問内容をご記載ください。</p>
+        <ul className="space-y-1">
+          <li>ご注文前: 確認したい内容</li>
+          <li>ご注文後: 注文時のメールアドレス、ペット名、確認したい内容</li>
+          <li>修正依頼: proof 確認ページの修正依頼フォームからお送りください</li>
+        </ul>
         <p>{businessInfo.legalNotice}</p>
       </section>
     </LegalPageShell>

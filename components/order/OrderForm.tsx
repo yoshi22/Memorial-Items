@@ -72,12 +72,12 @@ export function OrderForm({ enabledMethods, bankAccount }: OrderFormProps) {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label htmlFor="customer_name">お名前 *</Label>
-            <Input id="customer_name" {...register('customer_name')} placeholder="山田 太郎" />
+            <Input id="customer_name" {...register('customer_name')} />
             {errors.customer_name && <p className="text-xs text-red-600">{errors.customer_name.message}</p>}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="customer_email">メールアドレス *</Label>
-            <Input id="customer_email" type="email" {...register('customer_email')} placeholder="you@example.com" />
+            <Input id="customer_email" type="email" {...register('customer_email')} />
             {errors.customer_email && <p className="text-xs text-red-600">{errors.customer_email.message}</p>}
           </div>
         </div>
@@ -89,7 +89,7 @@ export function OrderForm({ enabledMethods, bankAccount }: OrderFormProps) {
 
         <div className="space-y-1.5">
           <Label htmlFor="pet_name">ペットのお名前 *</Label>
-          <Input id="pet_name" {...register('pet_name')} placeholder="ポチ" />
+          <Input id="pet_name" {...register('pet_name')} />
           {errors.pet_name && <p className="text-xs text-red-600">{errors.pet_name.message}</p>}
         </div>
 
@@ -159,16 +159,15 @@ export function OrderForm({ enabledMethods, bankAccount }: OrderFormProps) {
           <Textarea
             id="must_keep_features"
             {...register('must_keep_features')}
-            placeholder="例: 鼻の周りの白い毛、左耳の折れ、目の琥珀色など"
             rows={3}
           />
-          <p className="text-xs text-ink-mute">制作で必ず反映します。できるだけ具体的にご記入ください。</p>
+          <p className="text-xs text-ink-mute">毛色、模様、耳や目の特徴など、制作で必ず反映したい点を具体的にご記入ください。</p>
           {errors.must_keep_features && <p className="text-xs text-red-600">{errors.must_keep_features.message}</p>}
         </div>
 
         <div className="space-y-1.5">
           <Label htmlFor="notes">その他ご要望（任意）</Label>
-          <Textarea id="notes" {...register('notes')} placeholder="ご自由にご記入ください" rows={2} />
+          <Textarea id="notes" {...register('notes')} rows={2} />
         </div>
       </div>
 

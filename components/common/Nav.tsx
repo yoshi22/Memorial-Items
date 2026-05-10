@@ -1,12 +1,17 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/80 backdrop-blur-md">
       <div className="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <span
-            className="h-7 w-7 rounded-[4px] bg-ink flex-shrink-0"
+          <Image
+            src="/icon.png"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 rounded-[4px] flex-shrink-0"
             aria-hidden="true"
           />
           <span className="font-serif text-xl text-ink tracking-tight">Memorial Items</span>

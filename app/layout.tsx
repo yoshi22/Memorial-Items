@@ -26,6 +26,9 @@ const notoSerifJP = Noto_Serif_JP({
 export const metadata: Metadata = {
   title: 'Memorial Items — ペットのメモリアルアート',
   description: '大切なペットの写真をもとに、手作業で整えたメモリアルアートを proof 確認後にデジタル納品します。',
+  icons: {
+    icon: '/icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

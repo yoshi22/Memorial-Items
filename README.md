@@ -48,7 +48,7 @@ Create `.env.local` with:
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY=`
 - `SUPABASE_SERVICE_ROLE_KEY=`
 - `APP_BASE_URL=http://localhost:3000`
-- `ADMIN_EMAILS=your-admin@example.com`
+- `ADMIN_EMAILS=`
 - `ADMIN_BASIC_AUTH_USERNAME=`
 - `ADMIN_BASIC_AUTH_PASSWORD=`
 - `ADMIN_ALLOWED_IPS=`
@@ -57,8 +57,8 @@ Create `.env.local` with:
 - `ADMIN_LOCKOUT_MINUTES=30`
 - `ADMIN_MAGIC_LINK_MAX_REQUESTS=5`
 - `ADMIN_MAGIC_LINK_WINDOW_MINUTES=15`
-- `EMAIL_FROM=onboarding@resend.dev`
-- `RESEND_API_KEY=`
+- `EMAIL_FROM=`
+- `BREVO_API_KEY=`
 - `POSTHOG_KEY=`
 - `BANK_TRANSFER_BANK_NAME=`（Phase 1〜）
 - `BANK_TRANSFER_BRANCH_NAME=`（Phase 1〜・任意）
@@ -89,10 +89,10 @@ For an internet-accessible test deployment:
 
 1. Import the repo into Vercel.
 2. Add the same environment variables used locally.
-3. Set `APP_BASE_URL` to your Vercel deployment URL such as `https://your-project.vercel.app`.
+3. Set `APP_BASE_URL` to your Vercel deployment URL.
 4. In Supabase Auth settings, add:
-   - Site URL: `https://your-project.vercel.app`
-   - Redirect URL: `https://your-project.vercel.app/auth/callback`
+   - Site URL: the production app URL
+   - Redirect URL: the production app callback URL ending in `/auth/callback`
 5. Set admin security envs:
    - `ADMIN_BASIC_AUTH_USERNAME`
    - `ADMIN_BASIC_AUTH_PASSWORD`

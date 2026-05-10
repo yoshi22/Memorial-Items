@@ -139,9 +139,9 @@ export function ProofReviewActions({ proofToken, proofId, isApproved, enablePhys
               id="request_text"
               name="request_text"
               rows={5}
-              placeholder="例: 右耳の色をもう少し濃くしてほしい。目の表情が少し違う気がするので明るくしてほしい。"
               required
             />
+            <p className="text-xs text-ink-mute">気になる箇所と希望する調整内容を、できるだけ具体的にご記入ください。</p>
           </div>
           <div className="flex gap-3">
             <Button type="submit" disabled={isPending} className="flex-1">

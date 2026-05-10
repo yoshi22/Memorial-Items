@@ -67,7 +67,7 @@ export function ProofUploader({ orderId }: { orderId: string }) {
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="production_notes">制作メモ（任意）</Label>
-            <Textarea id="production_notes" name="production_notes" rows={2} placeholder="制作上の注記" />
+            <Textarea id="production_notes" name="production_notes" rows={2} />
             <p className="text-xs text-gray-500">v1 は初稿、v2 以降は修正版として保存されます。</p>
           </div>
           {error && <p className="text-sm text-red-600">{error}</p>}
