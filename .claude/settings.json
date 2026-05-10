@@ -1,0 +1,60 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/track_code_changes.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/track_route_changes.py"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/track_code_changes.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/track_route_changes.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/check_dev_log.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/check_screen_transitions.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/check_dev_log.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/check_screen_transitions.py"
+          }
+        ]
+      }
+    ]
+  }
+}

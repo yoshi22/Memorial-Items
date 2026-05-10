@@ -1,0 +1,20 @@
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+
+[db]
+port = 54322
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+# Local Supabase CLI defaults only. Production Site URL / Redirect URLs
+# must be configured in the Supabase Dashboard to match the deployed app URL.
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+
+[auth.email]
+enable_signup = true
