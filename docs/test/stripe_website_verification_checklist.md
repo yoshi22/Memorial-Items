@@ -3,7 +3,7 @@
 > **Phase 3 用**。Stripe website verification が再開するまで使用しない。Phase 1/2 では本ドキュメントは参照不要。
 
 ## Purpose
-Stripe の website verification 再審査前に、公開サイトが最低限の公開情報を満たしているか確認する。
+Stripe の website verification 用に、公開サイトが最低限の公開情報を満たしているか確認する。
 
 ## Page checks
 - `/` にサービス概要、支払い方法、納品目安、返金方針がある

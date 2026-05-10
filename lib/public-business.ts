@@ -2,9 +2,9 @@ import { getEnabledPaymentMethods } from './payments'
 
 export const businessInfo = {
   serviceName: 'Memorial Items',
-  legalEntityName: 'Memorial Items 運営事務局（正式名称差し替え予定）',
-  representative: '運営責任者情報を公開前に差し替えてください',
-  address: '事業所所在地を公開前に差し替えてください',
+  legalEntityName: '請求があった場合、遅滞なく開示します。',
+  representative: '請求があった場合、遅滞なく開示します。',
+  address: '請求があった場合、遅滞なく開示します。',
   contactEmail: 'yoshi.mario.developer@gmail.com',
   contactHours: '平日 10:00-18:00（土日祝除く）',
   responseTime: '通常 2 営業日以内に返信します。',
@@ -22,7 +22,7 @@ export const businessInfo = {
   cancellationSummary: '制作開始前はキャンセル相談可、制作開始後は対応済み工数を踏まえて判断します。',
   revisionSummary: '初稿確認後に修正依頼を受け付け、内容に応じて再提示します。',
   legalNotice:
-    'このページの事業者情報は Stripe 再審査前に実際の事業者情報へ差し替えてください。',
+    '販売事業者、運営責任者、所在地の開示請求は、上記連絡先メールアドレスまでご連絡ください。請求があった場合、遅滞なく開示します。',
 }
 
 export const footerLegalLinks = [

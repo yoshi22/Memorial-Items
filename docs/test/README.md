@@ -10,4 +10,4 @@
   - Part 0（Phase 1）: 振込先 env 設定、Part 2（Phase 2）: PayPay 設定（保留中）、Part 1（Phase 3）: Stripe 凍結中
 - `security_acceptance_checklist.md` - 実運用開始前に管理画面セキュリティと運用 controls を確認する手順
   - Basic auth、MFA、lockout、upload restrictions、security headers、振込先情報の露出確認を含む
-- `stripe_website_verification_checklist.md` - **Phase 3 用（現在凍結）** Stripe の website verification 再審査前に確認する手順
+- `stripe_website_verification_checklist.md` - **Phase 3 用（現在凍結）** Stripe website verification 用の公開情報を確認する手順

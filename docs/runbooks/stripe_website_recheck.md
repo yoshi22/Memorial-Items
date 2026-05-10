@@ -3,7 +3,7 @@
 > **Phase 3 用**。Stripe website verification が再開するまで使用しない。Phase 1/2 では本ドキュメントは参照不要。
 
 ## Purpose
-Stripe の website verification が停止したときに、公開サイトを確認し、再審査前に見るべき項目を整理する。
+Stripe の website verification が停止したときに、公開サイトで確認する項目を整理する。
 
 ## Public URLs to verify
 - `https://memorial-items.vercel.app/`
@@ -34,5 +34,4 @@ Stripe の website verification が停止したときに、公開サイトを確
 4. Stripe の account status が再審査に入るかを確認する
 
 ## Notes
-- placeholder の事業者情報や連絡先は、本番再審査前に実値へ差し替える
 - digital-first の current release と矛盾しないように公開コピーを維持する
